@@ -1,6 +1,6 @@
 ;;; shell-here.el --- Open a shell relative to the working directory
 
-;; Copyright (C) 2009-2012, 2015  Ian Eure
+;; Copyright (C) 2009-2012, 2015, 2021  Ian Eure
 
 ;; Author: Ian Eure <ian.eure@gmail.com>
 ;; Version: 1.3
@@ -52,6 +52,9 @@
 
 (eval-when-compile
   (require 'cl-lib))
+
+(require 'tramp)
+(require 'comint)
 
 (defvar shell-here-project-root-functions
   '(projectile-project-root ffip-project-root)
